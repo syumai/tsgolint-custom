@@ -1,0 +1,108 @@
+
+[TestRequireErrorCauseRule/invalid-0 - 1]
+Diagnostic 1: missingCause (4:3 - 4:25)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   3 | } catch (e) {
+   4 |   throw new Error('msg');
+     |   ~~~~~~~~~~~~~~~~~~~~~~~
+   5 | }
+---
+
+[TestRequireErrorCauseRule/invalid-1 - 1]
+Diagnostic 1: missingCause (4:3 - 4:29)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   3 | } catch (e) {
+   4 |   throw new Error('msg', {});
+     |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   5 | }
+---
+
+[TestRequireErrorCauseRule/invalid-2 - 1]
+Diagnostic 1: missingCause (4:3 - 4:47)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   3 | } catch (e) {
+   4 |   throw new Error('msg', { message: 'other' });
+     |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   5 | }
+---
+
+[TestRequireErrorCauseRule/invalid-3 - 1]
+Diagnostic 1: incorrectCause (5:3 - 5:47)
+Message: The `cause` property must reference the caught error variable.
+   4 | } catch (e) {
+   5 |   throw new Error('msg', { cause: someOther });
+     |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   6 | }
+---
+
+[TestRequireErrorCauseRule/invalid-4 - 1]
+Diagnostic 1: missingCause (4:3 - 4:29)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   3 | } catch (e) {
+   4 |   throw new TypeError('msg');
+     |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   5 | }
+---
+
+[TestRequireErrorCauseRule/invalid-5 - 1]
+Diagnostic 1: missingCause (5:3 - 5:31)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   4 | } catch (e) {
+   5 |   throw new CustomError('msg');
+     |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   6 | }
+---
+
+[TestRequireErrorCauseRule/invalid-6 - 1]
+Diagnostic 1: missingCause (5:3 - 5:12)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   4 |   const err = new Error('msg');
+   5 |   throw err;
+     |   ~~~~~~~~~~
+   6 | }
+---
+
+[TestRequireErrorCauseRule/invalid-7 - 1]
+Diagnostic 1: missingCause (4:3 - 4:20)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   3 | } catch (e) {
+   4 |   throw new Error();
+     |   ~~~~~~~~~~~~~~~~~~
+   5 | }
+---
+
+[TestRequireErrorCauseRule/invalid-8 - 1]
+Diagnostic 1: missingCause (6:5 - 6:27)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   5 |   } catch (inner) {
+   6 |     throw new Error('msg');
+     |     ~~~~~~~~~~~~~~~~~~~~~~~
+   7 |   }
+---
+
+[TestRequireErrorCauseRule/invalid-9 - 1]
+Diagnostic 1: missingCause (4:3 - 4:27)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   3 | } catch (e) {
+   4 |   throw (new Error('msg'));
+     |   ~~~~~~~~~~~~~~~~~~~~~~~~~
+   5 | }
+---
+
+[TestRequireErrorCauseRule/invalid-10 - 1]
+Diagnostic 1: missingCause (5:5 - 5:27)
+Message: Thrown Error in catch block must include `{ cause }` from the caught error.
+   4 |   if (true) {
+   5 |     throw new Error('msg');
+     |     ~~~~~~~~~~~~~~~~~~~~~~~
+   6 |   }
+---
+
+[TestRequireErrorCauseRule/invalid-11 - 1]
+Diagnostic 1: incorrectCause (6:5 - 6:45)
+Message: The `cause` property must reference the caught error variable.
+   5 |   } catch (inner) {
+   6 |     throw new Error('msg', { cause: outer });
+     |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   7 |   }
+---

@@ -58,6 +58,7 @@ import (
 	"github.com/typescript-eslint/tsgolint/internal/rules/non_nullable_type_assertion_style"
 	"github.com/typescript-eslint/tsgolint/internal/rules/only_throw_error"
 	"github.com/typescript-eslint/tsgolint/internal/rules/prefer_find"
+	"github.com/typescript-eslint/tsgolint/internal/rules/require_error_cause"
 	"github.com/typescript-eslint/tsgolint/internal/rules/prefer_includes"
 	"github.com/typescript-eslint/tsgolint/internal/rules/prefer_nullish_coalescing"
 	"github.com/typescript-eslint/tsgolint/internal/rules/prefer_optional_chain"
@@ -211,6 +212,7 @@ var allRules = []rule.Rule{
 	related_getter_setter_pairs.RelatedGetterSetterPairsRule,
 	require_array_sort_compare.RequireArraySortCompareRule,
 	require_await.RequireAwaitRule,
+	require_error_cause.RequireErrorCauseRule,
 	restrict_plus_operands.RestrictPlusOperandsRule,
 	restrict_template_expressions.RestrictTemplateExpressionsRule,
 	return_await.ReturnAwaitRule,
