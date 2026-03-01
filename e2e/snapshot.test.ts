@@ -66,6 +66,7 @@ const ALL_RULES = [
   'related-getter-setter-pairs',
   'require-array-sort-compare',
   'require-await',
+  'require-error-cause',
   'restrict-plus-operands',
   'restrict-template-expressions',
   'return-await',

@@ -3424,6 +3424,19 @@ exports[`TSGoLint E2E Snapshot Tests > should generate consistent diagnostics sn
     "file_path": "fixtures/basic/rules/return-await/index.ts",
     "kind": 0,
     "message": {
+      "description": "Thrown Error in catch block must include \`{ cause }\` from the caught error.",
+      "id": "missingCause",
+    },
+    "range": {
+      "end": 444,
+      "pos": 407,
+    },
+    "rule": "require-error-cause",
+  },
+  {
+    "file_path": "fixtures/basic/rules/return-await/index.ts",
+    "kind": 0,
+    "message": {
       "description": "Returning an awaited promise is required in this context.",
       "id": "requiredPromiseAwait",
     },
